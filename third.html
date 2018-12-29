@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+        <link href="https://cdn.bootcss.com/pure/1.0.0/pure-min.css" rel="stylesheet">
+        <style>
+            h1 {font-size: 300%}
+            body {text-align: center;}
+        </style>
+        <style scoped>
+            .button-xlarge {font-size: 125%;}
+        </style>
+    </head>
+    <body>
+        <h1>2019</h1>
+        <br/>
+
+        <a class="pure-button pure-button-disabled button-xlarge" href="./fourth.html" id="mainbutton">2019年1月1日开启</a>
+    </body>
+    <script>
+        $(document).ready( function() {
+                var odate = new Date();
+                var nyear = odate.getFullYear();
+                var nmonth = odate.getMonth() + 1;
+                var nday = odate.getDate();
+                console.log(nyear);
+                console.log(nmonth);
+                console.log(nday);
+                if( nyear == 2018 && nmonth == 12 && nday == 29 ) {
+                    console.log("judgeok");
+                    $("#mainbutton").removeClass("pure-button-disabled");
+                    $("#mainbutton").addClass("pure-button-primary");
+                };
+        });
+    </script>
+</html>
